@@ -1,2 +1,12 @@
-# G1H1_2022_JavaScript_01
-2022後期G1H1 JavaScript 01
+# JavaScript01
+
+## JavaScript の基本と写真の変更
+
+<br>
+
+---
+
+## スライド資料
+
+[資料へのリンク](https://drive.google.com/file/d/1uAVj-Oe7oWdrR1w4N1Gv-S1_F0w8YZLo/view?usp=sharing)
+<br>
