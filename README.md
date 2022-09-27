@@ -1,12 +1,8 @@
-# JavaScript01
-
-## JavaScript の基本と写真の変更
-
-<br>
+# JavaScript の基本と写真の変更
 
 ---
 
-## 授業のデータは、↑↑ の Code からダウンロードしてください。
+## 授業のデータは、➚ の <span style="color: Green; ">Code</span> からダウンロードしてください。
 
 ---
 
