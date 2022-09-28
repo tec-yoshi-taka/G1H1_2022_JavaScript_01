@@ -16,3 +16,5 @@
 ## 現時点の状況確認
 
 [現在の index.html の確認](https://tec-yoshi-taka.github.io/G1H1_2022_JavaScript_01/)
+
+[現在の sample.html の確認](https://tec-yoshi-taka.github.io/G1H1_2022_JavaScript_01/sample.html)
