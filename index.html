@@ -94,6 +94,19 @@
         <p><small>Copyright &copy; 2022 Yoshihiro Takahashi</small></p>
       </footer>
     </div>
-    <script></script>
+    <script>
+      "use strict";
+      // document.querySelector('.message-title').innerHTML = "メッセージ";
+      // document.querySelector('.message-area:nth-of-type(1) h1').innerHTML = "メッセージ2";
+      const msgTitle = document.querySelector('.message-title');
+      const msgTitles = document.querySelectorAll('.message-title');
+      const msgImg2 = document.querySelector('.message-area:nth-of-type(2) img')
+      msgTitle.innerHTML = 'メッセージ';
+      msgTitle.style.color = '#00c';
+      msgTitles[1].style.color = '#c0c';
+      msgTitles[2].style.color = '#0cc';
+      msgImg2.title = "クレープ";
+      msgImg2.src = "images/photo04_thum.jpg"
+    </script>
   </body>
 </html>
