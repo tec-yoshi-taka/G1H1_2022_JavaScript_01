@@ -101,6 +101,68 @@
       const msgTitle = document.querySelector('.message-title');
       const msgTitles = document.querySelectorAll('.message-title');
       const msgImg2 = document.querySelector('.message-area:nth-of-type(2) img')
+      // >ボタン
+      const next = document.querySelector('#next');
+      // <ボタン
+      const prev = document.querySelector('#prev');
+      // 大きな写真のliタグ全て
+      const mainImgLi = document.querySelectorAll('.imgArea li');
+      // 小さい花のボタン
+      const imgBtns = document.querySelectorAll('nav ul li');
+      let no = 0;
+      let index = 0;
+
+      next.addEventListener('click',()=>{
+        // console.log('クリック');
+
+        // if(no < 4){
+        //   no++;
+        // }else{
+        //   no = 0;
+        // }
+        no++;
+        if(no == 5){
+          no = 0;
+        }    
+        console.log(no);
+        mainImgLi.forEach((img) => {
+          img.style.opacity = 0;
+        });
+        mainImgLi[no].style.opacity = 1;
+      });
+
+      prev.addEventListener('click',()=>{
+        console.log('クリック');
+        no--;
+        if(no === -1){
+          no = 4;
+        }
+        console.log(no);
+        mainImgLi.forEach((img) => {
+          img.style.opacity = 0;
+        });
+        mainImgLi[no].style.opacity = 1;
+      });
+
+      imgBtns.forEach((btn) => {
+        btn.addEventListener('mouseenter',()=>{
+          btn.style.opacity = 0.5;
+        });
+        btn.addEventListener('mouseleave',()=>{
+          btn.style.opacity = 1;
+        });
+        btn.addEventListener('click',()=>{
+          index = Array.from(imgBtns).indexOf(btn);
+          console.log(index);
+          no = index;
+          mainImgLi.forEach((img) => {
+            img.style.opacity = 0;
+          });
+          mainImgLi[index].style.opacity = 1;
+        });
+      });
+
+
       msgTitle.innerHTML = 'メッセージ';
       msgTitle.style.color = '#00c';
       msgTitles[1].style.color = '#c0c';
@@ -108,8 +170,14 @@
       msgTitles[2].innerHTML = 'メッセージ03';
       msgImg2.title = "クレープ";
       msgImg2.src = "images/photo04_thum.jpg";
-      msgTitles[2].addEventListener('mouseenter',()=>{
-        msgTitles[1].style.color = '#000';
+      msgTitles[0].addEventListener('click',()=>{
+        msgTitles[0].style.background = '#ccc';
+      });
+      msgTitles[1].addEventListener('mousedown',()=>{
+        msgTitles[1].style.background = '#ccc';
+      });
+      msgTitles[2].addEventListener('mouseup',()=>{
+        msgTitles[2].style.background = '#ccc';
       });
     </script>
   </body>
