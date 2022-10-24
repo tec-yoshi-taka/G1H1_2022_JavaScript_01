@@ -105,8 +105,12 @@
       msgTitle.style.color = '#00c';
       msgTitles[1].style.color = '#c0c';
       msgTitles[2].style.color = '#0cc';
+      msgTitles[2].innerHTML = 'メッセージ03';
       msgImg2.title = "クレープ";
-      msgImg2.src = "images/photo04_thum.jpg"
+      msgImg2.src = "images/photo04_thum.jpg";
+      msgTitles[2].addEventListener('mouseenter',()=>{
+        msgTitles[1].style.color = '#000';
+      });
     </script>
   </body>
 </html>
