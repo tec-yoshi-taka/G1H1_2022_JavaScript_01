@@ -114,6 +114,12 @@
       let no = 0;
       let index = 0;
 
+      next.addEventListener('mousedown',()=>{
+        mainImgLi.forEach((img) => {
+          img.classList.remove('fadeIn');
+          img.classList.remove('fadeOut');
+        });
+      });
       next.addEventListener('click',()=>{
         // console.log('クリック');
 
@@ -131,6 +137,13 @@
           img.style.opacity = 0;
         });
         mainImgLi[no].style.opacity = 1;
+        mainImgLi[no].classList.add("fadeIn");
+        if(no === 0){
+          mainImgLi[4].classList.add("fadeOut");
+        }else{
+          mainImgLi[no-1].classList.add("fadeOut");
+        }
+        
       });
 
       prev.addEventListener('click',()=>{
