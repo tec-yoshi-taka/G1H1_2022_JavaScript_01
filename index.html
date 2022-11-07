@@ -109,6 +109,8 @@
       const mainImgLi = document.querySelectorAll('.imgArea li');
       // 小さい花のボタン
       const imgBtns = document.querySelectorAll('nav ul li');
+      // message01〜message03
+      const msgH1s = document.querySelectorAll('.message-title');
       let no = 0;
       let index = 0;
 
@@ -162,6 +164,11 @@
         });
       });
 
+      msgH1s.forEach((h1)=>{
+        h1.addEventListener('click',()=>{
+          h1.nextElementSibling.classList.toggle('none');
+        });
+      });
 
       msgTitle.innerHTML = 'メッセージ';
       msgTitle.style.color = '#00c';
