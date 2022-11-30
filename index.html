@@ -90,7 +90,7 @@
           </section>
         </article>
       </main>
-      <footer>
+      <footer class="fadeIn2">
         <p><small>Copyright &copy; 2022 Yoshihiro Takahashi</small></p>
       </footer>
     </div>
@@ -118,6 +118,14 @@
         mainImgLi.forEach((img) => {
           img.classList.remove('fadeIn');
           img.classList.remove('fadeOut');
+          img.classList.remove('fadeIn2');
+        });
+      });
+      prev.addEventListener('mousedown',()=>{
+        mainImgLi.forEach((img) => {
+          img.classList.remove('fadeIn');
+          img.classList.remove('fadeOut');
+          img.classList.remove('fadeIn2');
         });
       });
       next.addEventListener('click',()=>{
@@ -143,7 +151,6 @@
         }else{
           mainImgLi[no-1].classList.add("fadeOut");
         }
-        
       });
 
       prev.addEventListener('click',()=>{
@@ -157,6 +164,12 @@
           img.style.opacity = 0;
         });
         mainImgLi[no].style.opacity = 1;
+        mainImgLi[no].classList.add("fadeIn");
+        if(no === 4){
+          mainImgLi[0].classList.add("fadeOut");
+        }else{
+          mainImgLi[no+1].classList.add("fadeOut");
+        }
       });
 
       imgBtns.forEach((btn) => {
@@ -166,6 +179,13 @@
         btn.addEventListener('mouseleave',()=>{
           btn.style.opacity = 1;
         });
+        btn.addEventListener('mousedown',()=>{
+          mainImgLi.forEach((img) =>{
+            img.classList.remove("fadeIn2");
+            img.classList.remove('fadeIn');
+            img.classList.remove('fadeOut');
+          });
+        });
         btn.addEventListener('click',()=>{
           index = Array.from(imgBtns).indexOf(btn);
           console.log(index);
@@ -174,6 +194,7 @@
             img.style.opacity = 0;
           });
           mainImgLi[index].style.opacity = 1;
+          mainImgLi[index].classList.add("fadeIn2");
         });
       });
 
